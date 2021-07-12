@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform:capitalize;
+}
+/*--------------
+         menu-bar 
+---------------------- */
+.menu-bar{
+    position: fixed;
+    width: 14rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 15px -1px white;
+    left: -14.5rem;
+    transition: all .5s linear;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo{
+    margin-top: 2.5rem;
+    color: white;
+}
+.logo h1 span{
+    color: crimson;
+}
+nav li{
+    list-style: none;
+    margin-top: 3rem;
+    transition: .6s ease;
+}
+nav li:hover{
+    padding-left: 3px;
+    transform: scale(1.1);
+    border-left: 1px solid #fff;
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+nav li a i{
+    color: crimson;
+}
+
+.logo img{
+    height: 4rem;
+    width: 4rem;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#checkebox{
+    display: none;
+}
+.toggole_menu .toggole-one i{
+    position: fixed;
+    color: white;
+    font-size: 2rem;
+    left: 1rem;
+    top: 1rem;
+    transition: all 0.4s linear;
+    cursor: pointer;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+.menu-bar .toggole-two i{
+    color: crimson;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 12rem;
+    transition: all 0.4s linear;
+    cursor: pointer;
+    opacity: 0;
+}
+.toggole_menu .toggole-one i{
+    font-size: 1.6rem;
+}
+#checkebox:checked ~ .menu-bar{
+    left: 0;
+}
+#checkebox:checked ~ .toggole-one i{
+    opacity: 0;
+}
+#checkebox:checked ~ .menu-bar .toggole-two i{
+    opacity: 1;
+}
+
+/* ------------------
+     home section start 
+-------------------- */
+#home{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6),
+                                       rgba(0, 0, 0, 0.6)),
+                                        url('images/laptop-banner-.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#home .content{
+    color: white;
+    font-size: 1.5rem;
+    animation: anim 1s linear 1;
+}
+@keyframes anim{
+    0%{
+        margin-top: -80px;
+    }
+    25%{
+        letter-spacing: 15px;
+        margin-top: -60px;
+    }
+    50%{
+        letter-spacing: 8px;
+        margin-top: -40px;
+
+    }
+    75%{
+        letter-spacing: 4px;
+        margin-top: -20px;
+    }
+    100%{
+        letter-spacing: 2px;
+        margin-top: 10px;
+    }
+
+    
+}
+
+#home .services{
+  position: absolute;
+  background: #341f97;
+  height: 60px;
+  top: 60%;
+  padding: 0 10px;
+  border-radius: 2rem;
+  color: white;
+  overflow: hidden;
+   
+}
+.services .line{
+    line-height: 60px;
+    text-align: center;
+}
+.line:first-child{
+    animation: text 12s infinite;
+}
+
+ @keyframes text{
+    0%{
+        margin-top: 0px;
+    }
+    16%{
+        margin-top:  -60px;
+    }
+
+    33%{
+        margin-top:  -120px;
+    }
+    50%{
+        margin-top:  -180px;
+    }
+    66%{
+        margin-top:  -120px;
+    }
+    82%{
+        margin-top:  -60px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

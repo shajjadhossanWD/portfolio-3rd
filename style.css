@@ -105,7 +105,7 @@ nav li a i{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -420,10 +420,92 @@ input[type="checkbox"]{
         media quary start 
  --------------------------- */
 
-@media (max-width:900px){
+@media screen and (min-width:689px) and (max-width:994px){
     #home{
-        width:auto;
+        width: 100%;
+        overflow: hidden;
     }
+    #home .content h1{
+        font-size: 1.5rem;
+    }
+    #players{
+        width: 100%;
+    }
+    #players .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .bolg-sec{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #players .content hr{
+        width: 684px;
+        margin: 258px 28px 0px 35px;
+    }
+    #courses{
+        width: 100%;
+        height: auto;
+    }
+    .corse-sec{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .corse-sec .box{
+        margin-bottom: 40px;
+
+    }
+    #contact{
+        width: 100%;
+    }
+
+    
+}
+
+@media(max-width:688px){
+    #home{
+        width: 100%;
+        overflow: hidden;
+    }
+    #home .content h1{
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    #players{
+        width: 100%;
+    }
+    #players .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bolg-sec{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #players .content hr{
+        width: 277px;
+        margin: 44rem 0 0 2rem;
+    }
+    .player{
+        flex-direction: column;
+        margin: auto;
+    }
+    .player h2{
+        padding-top: 10px;
+    }
+    #courses{
+        width: 100%;
+        height: auto;
+    }
+    .corse-sec{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .corse-sec .box{
+        margin-bottom: 40px;
+
+    }
+    #contact{
+        width: 100%;
+    }
+    
     
 }
 
